@@ -7,7 +7,7 @@ stages
  { steps { git branch: 'master', url: 'https://github.com/prakashk0301/mavenproject' }}
 
  stage('code compile')
- {steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true)  {
+ {steps { withMaven(globalMavenSettingsConfig: '', jdk: '', maven: '', mavenSettingsConfig: '', traceability: true)  {
 	sh 'mvn compile'
  } }}
 
