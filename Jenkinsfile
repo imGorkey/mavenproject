@@ -7,7 +7,7 @@ stages
  { agent { label: 'JAVA' }
   steps { git branch: 'master', url: 'https://github.com/prakashk0301/mavenproject' }}
 
- stage('code compile')
+ /*stage('code compile')
  { agent { label 'JAVA' }
 steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true)  {
 	sh 'mvn compile'
@@ -27,7 +27,7 @@ steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HO
 
 
  stage('build docker image')
- {steps { sh 'docker build -t pkw0301/devops:tomcat .' }}
+ {steps { sh 'docker build -t pkw0301/devops:tomcat .' }}*/
 
 }
 }
