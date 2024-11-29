@@ -21,7 +21,10 @@ stage('code build')
 	sh 'mvn package'
  } }}
 
-
+ stage('code deploy to tomcat server')
+ {steps { sshagent(['deploy-to-tomcat']) {
+	sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp ec2-user@172.31.40.38:/usr/share/tomcat/webapps'
+ } }}
 
 }
 }
